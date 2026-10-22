@@ -1,0 +1,6 @@
+Qty,Designator,Description,Manufacturer,MPN,Side,Note
+10,L1 L2 L3 L4 L5 L7 L8 L9 L10 L11,1.1uH 15A WE-HCI 7050,Würth Elektronik,744314110,bottom,5 in series per line = 5.5uH; bottom side. LCSC C2651186 was out of stock
+2,L6 L12,1mH 1008PS,Coilcraft,1008PS-105KLC,bottom,Footprint fits Coilcraft 1008PS only (an 1812 part does not fit); bottom side
+2,J1 J2,SMA jack THT vertical,TE Connectivity,5-1814832-2,top,Top side. Also stocked at LCSC as C482015
+6,J3 J4 J5 J6 J7 J8,4mm banana jack,Keystone,575-8,top,Top side. 575-4 is too short (see upstream README)
+1,CASE_HAMMOND_1590BBK1,Aluminium case,Hammond,1590B,-,The PCB replaces the lid. 1590BBK is powder coated: remove the coating on the rim for ground contact or use the unpainted 1590B

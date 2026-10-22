@@ -1,0 +1,25 @@
+refs,assembly,value,comment,lcsc,mfr,mpn,original_mpn,rot_offset,note
+C1 C2,jlc,22uF,22uF 100V X7R 2220,C7499406,Fenghua,FS55X226K101LRG,TDK CKG57NX7S2A226M500JH,0,Original (stacked X7S) out of stock at LCSC; standard 2220 MLCC fits C_2220 footprint
+C5 C6 C7 C8,jlc,2.2uF,2.2uF 100V X7R 1210,C342652,TDK,CGA6N3X7R2A225KT0Y0U,TDK CGA6N3X7R2A225K230AB,0,Same TDK part family/value; different packaging code
+C11 C12 C13 C14,jlc,470nF,470nF 100V X7R 0805,C597304,KYOCERA AVX,08051C474KAT2A,KYOCERA AVX 08051C474KAT2A,0,Original part
+C15 C16,jlc,100nF,100nF 250V X7R 1206,C97956,Murata,GRM31CR72E104KW03L,TDK C3216X7R2E104K160AA,0,Original out of stock at LCSC
+D1 D2 D3 D4,jlc,SOT23-DIODEDUAL,BAV99,C2500,Nexperia,"BAV99,215","Nexperia BAV99,215",0,Original part; JLCPCB basic part. Check orientation in JLCPCB preview: pin 3 (common node) must sit on the single pad
+GD1 GD2,jlc,S30-A75X,GDT 75V 5kA SMD,C3660736,TDK (EPCOS),B88069X1023T253,TDK (EPCOS) B88069X1023T253,0,Original part
+R1 R2,jlc,909R,909R 1% 0805,C17863,UNI-ROYAL,0805W8F9090T5E,TE RQ73C2A909RBTD (0.1%),0,0.1% thin film out of stock; 1% changes attenuation by well below 0.1 dB
+R3 R4,jlc,1R,1R 5% 0.5W 1218,C175575,Vishay,CRW1218J1R00E04Z,KOA WK73S2JTTE1R00F (1W 1%),0,Damping of the 22uF supply capacitor; no DC current flows
+R5 R6,jlc,825R,825R 1% 0805,C4350148,Vishay,CRCW0805825RFKEA,Panasonic ERJ-PB6B8250V (0.1%),0,0.1% out of stock
+R7 R8,jlc,12.1R,12.1R 1% 1206,C3000603,FOJAN,FRC1206F12R1TS,TE RQ73C2B12R1BTD (0.1% 0.4W),0,0.1% out of stock; 0.25W instead of 0.4W
+R9 R10 R13 R14,jlc,0R,0R 1206,C17888,UNI-ROYAL,1206W4F0000T5E,YAGEO RC1206JR-7W0RL,0,JLCPCB basic part; jumpers in the 2.2uF capacitor branch (no DC current)
+R11 R12,jlc,243R,243R 1% 0805,C295889,YAGEO,RC0805FR-07243RL,TE RQ73C2A243RBTD (0.1%),0,0.1% out of stock
+R15 R16,jlc,274R,274R 1% 0805,C3008866,Vishay,CRCW0805274RFKEA,TE 6-2176091-5 (0.1%),0,0.1% out of stock
+R17 R18,jlc,30.1R,30.1R 1% 0.5W 1206,C2774910,UNI-ROYAL,HP06W2F301JT5E,TE RQ73C2B30R1BTD (0.1% 0.4W),0,0.1% out of stock
+R19 R20 R21 R22 R23 R24 R25 R26,jlc,432R,432R 1% 0805,C273898,YAGEO,RC0805FR-07432RL,TE 8-2176091-3 (0.1%),0,0.1% out of stock
+R27 R28,jlc,18.2R,18.2R 1% 1206,C5126139,FOJAN,FRC1206F18R2TS,TE RQ73C2B18R2BTD (0.1% 0.4W),0,0.1% out of stock; 0.25W instead of 0.4W
+R29 R30,jlc,562R,562R 1% 0805,C17755,UNI-ROYAL,0805W8F5620T5E,TE 9-2176091-4 (0.1%),0,0.1% out of stock
+R31 R32,jlc,619R,619R 1% 0805,C273913,YAGEO,RC0805FR-07619RL,TE RQ73C2A619RBTD (0.1%),0,0.1% out of stock
+L1 L2 L3 L4 L5 L7 L8 L9 L10 L11,hand,1.1uH,1.1uH 15A WE-HCI 7050,,Würth Elektronik,744314110,Würth Elektronik 744314110,0,5 in series per line = 5.5uH; bottom side. LCSC C2651186 was out of stock
+L6 L12,hand,1mH,1mH 1008PS,,Coilcraft,1008PS-105KLC,Coilcraft 1008PS-105KLC,0,Footprint fits Coilcraft 1008PS only (an 1812 part does not fit); bottom side
+J1 J2,hand,Conn_SMA,SMA jack THT vertical,,TE Connectivity,5-1814832-2,TE Connectivity 5-1814832-2,0,Top side. Also stocked at LCSC as C482015
+J3 J4 J5 J6 J7 J8,hand,BANANA_CONN,4mm banana jack,,Keystone,575-8,Keystone 575-8,0,Top side. 575-4 is too short (see upstream README)
+CASE_HAMMOND_1590BBK1,hand,~,Aluminium case,,Hammond,1590B,Hammond 1590BBK,0,The PCB replaces the lid. 1590BBK is powder coated: remove the coating on the rim for ground contact or use the unpainted 1590B
+H1 H2 H3 H4,dnp,MOUNT-PAD-ROUND4.1,Mounting hole,,,,,0,No part; use the lid screws of the case
