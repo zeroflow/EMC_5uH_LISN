@@ -18,7 +18,7 @@ R27 R28,jlc,18.2R,18.2R 1% 1206,C5126139,FOJAN,FRC1206F18R2TS,TE RQ73C2B18R2BTD 
 R29 R30,jlc,562R,562R 1% 0805,C17755,UNI-ROYAL,0805W8F5620T5E,TE 9-2176091-4 (0.1%),0,0.1% out of stock
 R31 R32,jlc,619R,619R 1% 0805,C273913,YAGEO,RC0805FR-07619RL,TE RQ73C2A619RBTD (0.1%),0,0.1% out of stock
 L1 L2 L3 L4 L5 L7 L8 L9 L10 L11,hand,1.1uH,1.1uH 15A WE-HCI 7050,,Wurth Elektronik,744314110,Wurth Elektronik 744314110,0,5 in series per line = 5.5uH; bottom side. LCSC C2651186 was out of stock
-L6 L12,hand,1mH,1mH 1008PS,,Coilcraft,1008PS-105KLB,Coilcraft 1008PS-105KLC,0,Footprint fits Coilcraft 1008PS only (an 1812 part does not fit); bottom side. KLB = cut tape for small quantities (KLC = full reel)
+L6 L12,hand,1mH,1mH 1008PS,,Coilcraft,1008PS-105KRB,Coilcraft 1008PS-105KLC,0,"Current Coilcraft code: R = halogen-free termination (replaces L), B = cut tape, C = 7"" reel. Same part and land pattern (Doc 219). Footprint fits 1008PS only (an 1812 part does not fit); bottom side"
 J1 J2,hand,Conn_SMA,SMA jack THT vertical,,TE Connectivity,5-1814832-2,TE Connectivity 5-1814832-2,0,Top side. Also stocked at LCSC as C482015
 J3 J4 J5 J6 J7 J8,hand,BANANA_CONN,4mm banana jack,,Keystone Electronics,575-8,Keystone Electronics 575-8,0,Top side. 575-4 is too short (see upstream README)
 CASE_HAMMOND_1590BBK1,hand,~,Aluminium case,,Hammond,1590B,Hammond 1590BBK,0,The PCB replaces the lid. 1590BBK is powder coated: remove the coating on the rim for ground contact or use the unpainted 1590B

@@ -13,6 +13,7 @@ generated from the unmodified `5uH_LISN.kicad_sch`, `5uH_LISN.kicad_pcb` and
 | `out/jlc_bom.csv` | BOM for JLCPCB assembly (`jlc` parts only) |
 | `out/jlc_cpl.csv` | Placement file for those parts |
 | `out/hand_bom.csv` | Parts you solder yourself |
+| `addons.csv` | Accessories for measuring with the LISN (Mouser BOM import format), not part of the board |
 | `out/order_bom.csv` | The same parts in the column names of Mouser's BOM import: `Quantity 1` = 1 LISN, `Quantity 2` = 10 LISNs |
 
 `generate.py` refuses to write anything unless every reference in the
@@ -46,6 +47,21 @@ All SMD parts sit on the **bottom** side, the SMA and banana jacks on the top.
    column names follow Mouser's export format, so the mapping should be
    detected automatically. Other distributors: map the columns by hand.
    Coilcraft samples are free on request.
+
+## Accessories (`addons.csv`)
+
+Not part of the board, but needed or useful for a measurement:
+
+- **50 Ω SMA termination (required):** each LISN line is only 50 Ω/5 µH when
+  its RF port is terminated. Terminate the port that is not connected to the
+  analyzer.
+- **Extra 10 dB SMA attenuator (optional):** in addition to the on-board
+  10 dB attenuator and limiter, for the first power-ups.
+- **SMA cable, banana plugs, DC cable:** LISN to analyzer and LISN to DUT.
+  Keep the DUT cable identical for all compared measurements.
+
+Part numbers were taken from distributor listings on 2026-10-22 and not
+checked for stock.
 
 ## Case
 

@@ -1,0 +1,6 @@
+Manufacturer Part Number,Manufacturer Name,Quantity 1,Customer Part Number,Description
+TRM2090-M0-SMA02,Cinch Connectivity Solutions,1,LISN 50R termination,"SMA male 50 Ohm termination 2 W, DC-18 GHz: terminates the unused LISN port (required, else that line is not 50 Ohm)"
+320160016,Seeed Studio,1,LISN extra 10dB,"SMA 10 dB attenuator 2 W, DC-6 GHz (optional): extra protection for the analyzer input during first tests"
+110990004,Seeed Studio,1,LISN SMA cable,"SMA male to SMA male, RG316, 50 cm (optional if the analyzer came with a cable)"
+3694,Adafruit,1,LISN DUT cable plugs,"4 mm stackable banana plugs, solder-free, pack of 5: DUT cable to J7/J8 and ground lead"
+DC5521MO-1FT,L-com,1,LISN DUT cable barrel,"DC cable 5.5/2.1 mm plug to open end, 30 cm: DUT side of the LISN-to-DUT cable (check the DUT jack size)"
