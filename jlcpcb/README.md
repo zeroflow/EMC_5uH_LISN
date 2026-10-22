@@ -13,6 +13,7 @@ generated from the unmodified `5uH_LISN.kicad_sch`, `5uH_LISN.kicad_pcb` and
 | `out/jlc_bom.csv` | BOM for JLCPCB assembly (`jlc` parts only) |
 | `out/jlc_cpl.csv` | Placement file for those parts |
 | `out/hand_bom.csv` | Parts you solder yourself |
+| `out/order_bom.csv` | The same parts for a distributor BOM import (e.g. Mouser), quantities for 1 and 10 LISNs |
 
 `generate.py` refuses to write anything unless every reference in the
 schematic and on the PCB appears exactly once in `parts.csv` and the values
@@ -41,7 +42,9 @@ All SMD parts sit on the **bottom** side, the SMA and banana jacks on the top.
    on 2026-10-22. All other JLC parts are unpolarised two-terminal parts. If a
    rotation is wrong, put the correction into `rot_offset` in `parts.csv` and
    regenerate.
-4. **Hand parts:** order `out/hand_bom.csv` from Mouser, Digi-Key or similar.
+4. **Hand parts:** import `out/order_bom.csv` at Mouser, Digi-Key or similar
+   (first line is a header; map `MPN`, `Manufacturer` and one or both
+   quantity columns). Coilcraft samples are free on request.
 
 ## Case
 

@@ -6,6 +6,7 @@ jlcpcb/out/:
   jlc_bom.csv     parts assembled by JLCPCB (assembly = jlc)
   jlc_cpl.csv     placement of those parts
   hand_bom.csv    parts soldered by hand (assembly = hand)
+  order_bom.csv   the same parts for a distributor BOM import, for 1 and 10 LISNs
   gerbers.zip     the upstream Gerber/drill files, zipped for upload
 
 Every reference in the schematic and on the PCB must appear exactly once in
@@ -166,6 +167,18 @@ def build_hand_bom(parts, pcb):
     return csv_text(["Qty", "Designator", "Description", "Manufacturer", "MPN", "Side", "Note"], rows)
 
 
+def build_order_bom(parts, batch):
+    """Hand parts for a distributor BOM import (e.g. Mouser): one LISN and a batch."""
+    rows = []
+    for row in parts:
+        if row["assembly"] != "hand":
+            continue
+        qty = len(row["refs"])
+        refs = " ".join(sorted(row["refs"], key=natural_key))
+        rows.append([row["mpn"], row["mfr"], qty, qty * batch, row["comment"], refs])
+    return csv_text(["MPN", "Manufacturer", "Qty 1 LISN", f"Qty {batch} LISN", "Description", "Designator"], rows)
+
+
 def build_gerber_zip():
     files = sorted(p for p in GERBER_DIR.iterdir() if p.suffix.lower() in GERBER_EXT)
     buf = io.BytesIO()
@@ -190,6 +203,7 @@ def main(argv):
         "jlc_bom.csv": build_bom(parts, pcb).encode(),
         "jlc_cpl.csv": build_cpl(parts, pcb).encode(),
         "hand_bom.csv": build_hand_bom(parts, pcb).encode(),
+        "order_bom.csv": build_order_bom(parts, 10).encode(),
         "gerbers.zip": build_gerber_zip(),
     }
     if check:
