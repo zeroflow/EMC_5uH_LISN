@@ -37,7 +37,8 @@ All SMD parts sit on the **bottom** side, the SMA and banana jacks on the top.
    `out/jlc_bom.csv` and `out/jlc_cpl.csv`.
 3. **Check the placement preview.** Only D1–D4 (BAV99) are orientation
    critical: pins 1 and 2 are both GND, so pin 3 (the common node) must sit on
-   the single pad. All other JLC parts are unpolarised two-terminal parts. If a
+   the single pad. Their `rot_offset` of 270° was taken from the JLCPCB preview
+   on 2026-10-22. All other JLC parts are unpolarised two-terminal parts. If a
    rotation is wrong, put the correction into `rot_offset` in `parts.csv` and
    regenerate.
 4. **Hand parts:** order `out/hand_bom.csv` from Mouser, Digi-Key or similar.
