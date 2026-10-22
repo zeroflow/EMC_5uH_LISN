@@ -46,7 +46,9 @@ All SMD parts sit on the **bottom** side, the SMA and banana jacks on the top.
 4. **Hand parts:** import `out/order_bom.csv` with Mouser's BOM tool. The
    column names follow Mouser's export format, so the mapping should be
    detected automatically. Other distributors: map the columns by hand.
-   Coilcraft samples are free on request.
+   The Coilcraft 1008PS-105KRC (L6/L12) was not in stock at Mouser on
+   2026-10-22 (lead time 9 weeks); plan the order around it. Coilcraft
+   samples are free on request.
 
 ## Accessories (`addons.csv`)
 
