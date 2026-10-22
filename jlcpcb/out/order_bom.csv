@@ -1,6 +1,6 @@
-MPN,Manufacturer,Qty 1 LISN,Qty 10 LISN,Description,Designator
-744314110,Würth Elektronik,10,100,1.1uH 15A WE-HCI 7050,L1 L2 L3 L4 L5 L7 L8 L9 L10 L11
-1008PS-105KLB,Coilcraft,2,20,1mH 1008PS,L6 L12
-5-1814832-2,TE Connectivity,2,20,SMA jack THT vertical,J1 J2
-575-8,Keystone,6,60,4mm banana jack,J3 J4 J5 J6 J7 J8
-1590B,Hammond,1,10,Aluminium case,CASE_HAMMOND_1590BBK1
+Manufacturer Part Number,Manufacturer Name,Quantity 1,Quantity 2,Customer Part Number,Description
+744314110,Würth Elektronik,10,100,"LISN L1-L5,L7-L11",1.1uH 15A WE-HCI 7050
+1008PS-105KLB,Coilcraft,2,20,"LISN L6,L12",1mH 1008PS
+5-1814832-2,TE Connectivity,2,20,LISN J1-J2,SMA jack THT vertical
+575-8,Keystone,6,60,LISN J3-J8,4mm banana jack
+1590B,Hammond,1,10,LISN CASE_HAMMOND_1590BBK1,Aluminium case

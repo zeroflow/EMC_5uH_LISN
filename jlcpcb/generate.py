@@ -167,16 +167,33 @@ def build_hand_bom(parts, pcb):
     return csv_text(["Qty", "Designator", "Description", "Manufacturer", "MPN", "Side", "Note"], rows)
 
 
+def ref_ranges(refs):
+    """['L1', 'L2', 'L3', 'L7'] -> 'L1-L3,L7'"""
+    out, run = [], []
+    for ref in sorted(refs, key=natural_key):
+        prefix, num, _ = natural_key(ref)
+        if run and (prefix, num) == (run[-1][0], run[-1][1] + 1):
+            run.append((prefix, num, ref))
+            continue
+        if run:
+            out.append(run[0][2] if len(run) == 1 else f"{run[0][2]}-{run[-1][2]}")
+        run = [(prefix, num, ref)]
+    if run:
+        out.append(run[0][2] if len(run) == 1 else f"{run[0][2]}-{run[-1][2]}")
+    return ",".join(out)
+
+
 def build_order_bom(parts, batch):
-    """Hand parts for a distributor BOM import (e.g. Mouser): one LISN and a batch."""
+    """Hand parts in the column names of Mouser's BOM import: Quantity 1 = one LISN, Quantity 2 = a batch."""
     rows = []
     for row in parts:
         if row["assembly"] != "hand":
             continue
         qty = len(row["refs"])
-        refs = " ".join(sorted(row["refs"], key=natural_key))
-        rows.append([row["mpn"], row["mfr"], qty, qty * batch, row["comment"], refs])
-    return csv_text(["MPN", "Manufacturer", "Qty 1 LISN", f"Qty {batch} LISN", "Description", "Designator"], rows)
+        rows.append([row["mpn"], row["mfr"], qty, qty * batch, f"LISN {ref_ranges(row['refs'])}", row["comment"]])
+    header = ["Manufacturer Part Number", "Manufacturer Name", "Quantity 1", "Quantity 2",
+              "Customer Part Number", "Description"]
+    return csv_text(header, rows)
 
 
 def build_gerber_zip():
